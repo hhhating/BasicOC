@@ -14,6 +14,9 @@
 		2BB8EF192A5FFDBD0085B881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8EF182A5FFDBD0085B881 /* Assets.xcassets */; };
 		2BB8EF1C2A5FFDBD0085B881 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8EF1A2A5FFDBD0085B881 /* LaunchScreen.storyboard */; };
 		2BB8EF1F2A5FFDBD0085B881 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8EF1E2A5FFDBD0085B881 /* main.m */; };
+		2BB8EF262A6001E10085B881 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8EF252A6001E10085B881 /* photo.png */; };
+		2BB8EF282A6002870085B881 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8EF272A6002870085B881 /* circle.png */; };
+		2BB8EF2A2A60EB2D0085B881 /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8EF292A60EB2D0085B881 /* house.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		2BB8EF1B2A5FFDBD0085B881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BB8EF1D2A5FFDBD0085B881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BB8EF1E2A5FFDBD0085B881 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BB8EF252A6001E10085B881 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		2BB8EF272A6002870085B881 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		2BB8EF292A60EB2D0085B881 /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				2BB8EF132A5FFDBC0085B881 /* ViewController.m */,
 				2BB8EF152A5FFDBC0085B881 /* Main.storyboard */,
 				2BB8EF182A5FFDBD0085B881 /* Assets.xcassets */,
+				2BB8EF292A60EB2D0085B881 /* house.png */,
+				2BB8EF272A6002870085B881 /* circle.png */,
+				2BB8EF252A6001E10085B881 /* photo.png */,
 				2BB8EF1A2A5FFDBD0085B881 /* LaunchScreen.storyboard */,
 				2BB8EF1D2A5FFDBD0085B881 /* Info.plist */,
 				2BB8EF1E2A5FFDBD0085B881 /* main.m */,
@@ -135,6 +144,9 @@
 			files = (
 				2BB8EF1C2A5FFDBD0085B881 /* LaunchScreen.storyboard in Resources */,
 				2BB8EF192A5FFDBD0085B881 /* Assets.xcassets in Resources */,
+				2BB8EF282A6002870085B881 /* circle.png in Resources */,
+				2BB8EF262A6001E10085B881 /* photo.png in Resources */,
+				2BB8EF2A2A60EB2D0085B881 /* house.png in Resources */,
 				2BB8EF172A5FFDBC0085B881 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,8 +302,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3S55929FM5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LogIn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -299,6 +314,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +322,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ltt.LogIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Cosign iOS Wildcard (0PQCFDS02O)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,8 +334,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3S55929FM5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LogIn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -325,6 +346,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +354,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ltt.LogIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Cosign iOS Wildcard (0PQCFDS02O)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
