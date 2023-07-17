@@ -5,71 +5,111 @@
 //  Created by ByteDance on 2023/7/13.
 //
 
+// 登录界面
 #import "ViewController.h"
+#import "RegisController.h"
+#define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 
-@interface ViewController () <UITextFieldDelegate>
-@property (nonatomic, strong) UITextField *textField;
+@interface ViewController ()
+@property (nonatomic, strong) UITextField *loginText;
+@property (nonatomic, strong) UITextField *passwdText;
+@property (nonatomic, strong) UIButton *loginBtn;
+@property (nonatomic, strong) UIButton *regisBtn;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.textField];
+    [self.view addSubview:self.loginText];
+    [self.view addSubview:self.passwdText];
+    [self.view addSubview:self.loginBtn];
+    [self.view addSubview:self.regisBtn];
 }
 
-- (UITextField *)textField {
-    if (!_textField) {
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(50, 100, 280, 30)];
-        // 边框风格
-        _textField.borderStyle = UITextBorderStyleRoundedRect;
-        // 默认文字
-        _textField.placeholder = @"请输入文字";
-        // 输入框中文字的颜色，非默认文字的颜色
-        _textField.textColor = [UIColor redColor];
-        _textField.font = [UIFont systemFontOfSize:14];
-        _textField.textAlignment = NSTextAlignmentCenter;
-        // 为其添加左视图
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"house"]];
-        _textField.leftView = imageView;
-        // 表示左视图一直存在
-        _textField.leftViewMode = UITextFieldViewModeAlways;
-        // 设置代理
-        _textField.delegate = self;
+- (UITextField *)loginText {
+    if (!_loginText) {
+        _loginText = [[UITextField alloc] initWithFrame:CGRectMake(20, 80, SCREEN_SIZE.width - 40, 30)];
+        _loginText.borderStyle = UITextBorderStyleRoundedRect;
+        _loginText.placeholder = @"请输入用户名";
+        UIImageView *loginImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 11, 11)];
+        loginImage.image = [UIImage imageNamed:@"login_user"];
+        _loginText.leftView = loginImage;
+        _loginText.leftViewMode = UITextFieldViewModeAlways;
     }
-    return _textField;
+    return _loginText;
 }
-// 当输入将要开始编辑时系统自动回调的方法，如果设置为 NO，就不会弹起键盘，控件不会进入编辑状态
-// 所谓的编辑状态就是光标出现在输入框中并闪烁，键盘弹出等待用户输入的状态
-//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {}
 
-// 当输入框已经开始编辑时系统自动回调的方法
-//- (BOOL)textFieldDidBeginEditing:(UITextField *)textField {}
-
-// 当输入框将要结束编辑时系统自动回调的方法
-//- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {}
-
-// 当输入框已经结束编辑时系统自动回调的方法
-//- (BOOL)textFieldDidEndEditing:(UITextField *)textField {}
-
-// 输入框中内容将要改变时系统自动调用的方法，range 是将要改变的字符范围，string 表示将要替换成的字符串，返回的 BOOL 表示字符改变行为是否会成功，判断用户输入内容的合法性一般在这个方法中判断
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(nonnull NSString *)string {
-    if (string.length > 0) {
-        if ([string characterAtIndex:0] < '0' || [string characterAtIndex:0] > '9') {
-            NSLog(@"请输入数字");
-            return NO;
-        }
-        if (textField.text.length + string.length > 11) {
-            NSLog(@"超过 11 位啦");
-            return NO;
-        }
+- (UITextField *)passwdText {
+    if (!_passwdText) {
+        _passwdText = [[UITextField alloc] initWithFrame:CGRectMake(20, 130, SCREEN_SIZE.width-40, 30)];
+        _passwdText.borderStyle = UITextBorderStyleRoundedRect;
+        _passwdText.placeholder = @"请输入密码";
+        _passwdText.secureTextEntry = YES;
+        UIImageView *passedImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 11, 11)];
+        passedImage.image = [UIImage imageNamed:@"passswd_user"];
+        _passwdText.leftView = passedImage;
+        _passwdText.leftViewMode = UITextFieldViewModeAlways;
     }
-    return YES;
+    return _passwdText;
 }
 
-// 输入框中内容将要清除时系统自动调用的方法，如果返回 NO，表示清除无效
-//- (BOOL)textFieldShouldClear:(UITextField *)textField {}
+- (UIButton *)loginBtn {
+    if (!_loginBtn) {
+        _loginBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        _loginBtn.frame = CGRectMake(SCREEN_SIZE.width/4 - 50, 180, 100, 30);
+        [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+        _loginBtn.layer.masksToBounds = YES;
+        _loginBtn.layer.cornerRadius = 10;
+        _loginBtn.backgroundColor = [UIColor cyanColor];
+        [_loginBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loginBtn;
+}
 
-// 用户按键盘上的 return 键后系统自动调用的方法
-//- (BOOL)textFieldShouldReturn:(UITextField *)textField {}
+- (UIButton *)regisBtn {
+    if (!_regisBtn) {
+        _regisBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        _regisBtn.frame = CGRectMake(SCREEN_SIZE.width/4*3 - 50, 180, 100, 30);
+        [_regisBtn setTitle:@"注册" forState:UIControlStateNormal];
+        _regisBtn.layer.masksToBounds = YES;
+        _regisBtn.layer.cornerRadius = 10;
+        _regisBtn.backgroundColor = [UIColor cyanColor];
+        [_regisBtn addTarget:self action:@selector(regis) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _regisBtn;
+}
+
+- (void)regis {
+    RegisController *con = [[RegisController alloc] init];
+    [self presentViewController:con animated:YES completion:nil];
+}
+
+- (void)login {
+    if (_loginText.text.length == 0) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请输入用户名" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"请输入用户名");
+        }];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
+    if (_passwdText.text.length == 0) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请输入密码" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"请输入密码");
+        }];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"登录成功");
+    }];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end

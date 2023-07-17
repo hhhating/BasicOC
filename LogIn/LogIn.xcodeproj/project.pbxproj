@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BB4FAE12A651C4C0017FB34 /* RegisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4FAE02A651C4C0017FB34 /* RegisController.m */; };
+		2BB4FC832A652A400017FB34 /* login_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB4FC822A652A400017FB34 /* login_user.png */; };
+		2BB4FC852A652A4C0017FB34 /* passswd_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB4FC842A652A4B0017FB34 /* passswd_user.png */; };
 		2BB8EF0E2A5FFDBC0085B881 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8EF0D2A5FFDBC0085B881 /* AppDelegate.m */; };
 		2BB8EF112A5FFDBC0085B881 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8EF102A5FFDBC0085B881 /* SceneDelegate.m */; };
 		2BB8EF142A5FFDBC0085B881 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8EF132A5FFDBC0085B881 /* ViewController.m */; };
@@ -20,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BB4FADF2A651C4C0017FB34 /* RegisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisController.h; sourceTree = "<group>"; };
+		2BB4FAE02A651C4C0017FB34 /* RegisController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisController.m; sourceTree = "<group>"; };
+		2BB4FC822A652A400017FB34 /* login_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_user.png; sourceTree = "<group>"; };
+		2BB4FC842A652A4B0017FB34 /* passswd_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passswd_user.png; sourceTree = "<group>"; };
 		2BB8EF092A5FFDBC0085B881 /* LogIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB8EF0C2A5FFDBC0085B881 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BB8EF0D2A5FFDBC0085B881 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,9 +80,13 @@
 				2BB8EF102A5FFDBC0085B881 /* SceneDelegate.m */,
 				2BB8EF122A5FFDBC0085B881 /* ViewController.h */,
 				2BB8EF132A5FFDBC0085B881 /* ViewController.m */,
+				2BB4FADF2A651C4C0017FB34 /* RegisController.h */,
+				2BB4FAE02A651C4C0017FB34 /* RegisController.m */,
 				2BB8EF152A5FFDBC0085B881 /* Main.storyboard */,
 				2BB8EF182A5FFDBD0085B881 /* Assets.xcassets */,
+				2BB4FC822A652A400017FB34 /* login_user.png */,
 				2BB8EF292A60EB2D0085B881 /* house.png */,
+				2BB4FC842A652A4B0017FB34 /* passswd_user.png */,
 				2BB8EF272A6002870085B881 /* circle.png */,
 				2BB8EF252A6001E10085B881 /* photo.png */,
 				2BB8EF1A2A5FFDBD0085B881 /* LaunchScreen.storyboard */,
@@ -146,7 +157,9 @@
 				2BB8EF192A5FFDBD0085B881 /* Assets.xcassets in Resources */,
 				2BB8EF282A6002870085B881 /* circle.png in Resources */,
 				2BB8EF262A6001E10085B881 /* photo.png in Resources */,
+				2BB4FC832A652A400017FB34 /* login_user.png in Resources */,
 				2BB8EF2A2A60EB2D0085B881 /* house.png in Resources */,
+				2BB4FC852A652A4C0017FB34 /* passswd_user.png in Resources */,
 				2BB8EF172A5FFDBC0085B881 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +174,7 @@
 				2BB8EF142A5FFDBC0085B881 /* ViewController.m in Sources */,
 				2BB8EF0E2A5FFDBC0085B881 /* AppDelegate.m in Sources */,
 				2BB8EF1F2A5FFDBD0085B881 /* main.m in Sources */,
+				2BB4FAE12A651C4C0017FB34 /* RegisController.m in Sources */,
 				2BB8EF112A5FFDBC0085B881 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
