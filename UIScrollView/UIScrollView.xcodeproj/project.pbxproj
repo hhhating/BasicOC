@@ -15,6 +15,7 @@
 		2BEA09112A663A2D00DE834B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEA090F2A663A2D00DE834B /* LaunchScreen.storyboard */; };
 		2BEA09142A663A2D00DE834B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEA09132A663A2D00DE834B /* main.m */; };
 		2BEA091B2A663ACC00DE834B /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2BEA091A2A663ACC00DE834B /* image.jpeg */; };
+		2BEA0CEB2A68DA3D00DE834B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEA0CEA2A68DA3D00DE834B /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2BEA09122A663A2D00DE834B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BEA09132A663A2D00DE834B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BEA091A2A663ACC00DE834B /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpeg; sourceTree = "<group>"; };
+		2BEA0CEA2A68DA3D00DE834B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				2BEA09082A663A2C00DE834B /* ViewController.m */,
 				2BEA090A2A663A2C00DE834B /* Main.storyboard */,
 				2BEA090D2A663A2D00DE834B /* Assets.xcassets */,
+				2BEA0CEA2A68DA3D00DE834B /* icon.png */,
 				2BEA091A2A663ACC00DE834B /* image.jpeg */,
 				2BEA090F2A663A2D00DE834B /* LaunchScreen.storyboard */,
 				2BEA09122A663A2D00DE834B /* Info.plist */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BEA09112A663A2D00DE834B /* LaunchScreen.storyboard in Resources */,
+				2BEA0CEB2A68DA3D00DE834B /* icon.png in Resources */,
 				2BEA091B2A663ACC00DE834B /* image.jpeg in Resources */,
 				2BEA090E2A663A2D00DE834B /* Assets.xcassets in Resources */,
 				2BEA090C2A663A2C00DE834B /* Main.storyboard in Resources */,
